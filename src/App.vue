@@ -53,7 +53,6 @@ import WeatherParent from './components/WeatherParent.vue'
 </template>
 
 <style scoped>
-.section {
-  padding: 20px;
-}
+@import '@/assets/practice.css';
+@import '@/assets/exercise.css';
 </style>
