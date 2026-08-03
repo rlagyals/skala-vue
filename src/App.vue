@@ -18,66 +18,40 @@ import FormData from './FormData.vue'
 import Vshorthand from './Vshorthand.vue'
 import Twoway from './Twoway.vue'
 import Weather from './Weather.vue'
+import Vref from './Vref.vue'
+import Vcomputed from './Vcomputed.vue'
+import Vwatch from './Vwatch.vue'
+import Deepwatch from './Deepwatch.vue'
 </script>
 
 <template>
-  <div style="padding: 20px">
-    <SampleOne />
-  </div>
-  <div style="padding: 20px">
-    <SampleTwo />
-  </div>
-  <div style="padding: 20px">
-    <Vhtml />
-  </div>
-  <div style="padding: 20px">
-    <Vxss />
-  </div>
-  <div style="padding: 20px">
-    <Vtext />
-  </div>
-  <div style="padding: 20px">
-    <Vbind />
-  </div>
-  <div style="padding: 20px">
-    <ClassBinding />
-  </div>
-  <div style="padding: 20px">
-    <StyleBinding />
-  </div>
-  <div style="padding: 20px">
-    <Vshorthand />
-  </div>
-  <div style="padding: 20px">
-    <Vifelse />
-  </div>
-  <div style="padding: 20px">
-    <Vshow />
-  </div>
-  <div style="padding: 20px">
-    <Vfor />
-  </div>
-  <div style="padding: 20px">
-    <Vmemo />
-  </div>
-  <div style="padding: 20px">
-    <Von />
-  </div>
-  <div style="padding: 20px">
-    <Vevent />
-  </div>
-  <div style="padding: 20px">
-    <Vmodifier />
-  </div>
-  <div style="padding: 20px">
-    <FormData />
-  </div>
-  <div style="padding: 20px">
-    <Twoway />
-  </div>
-  <div style="padding: 20px">
-    <Weather />
-  </div>
+  <div class="section"><SampleOne /></div>
+  <div class="section"><SampleTwo /></div>
+  <div class="section"><Vhtml /></div>
+  <div class="section"><Vxss /></div>
+  <div class="section"><Vtext /></div>
+  <div class="section"><Vbind /></div>
+  <div class="section"><ClassBinding /></div>
+  <div class="section"><StyleBinding /></div>
+  <div class="section"><Vshorthand /></div>
+  <div class="section"><Vifelse /></div>
+  <div class="section"><Vshow /></div>
+  <div class="section"><Vfor /></div>
+  <div class="section"><Vmemo /></div>
+  <div class="section"><Von /></div>
+  <div class="section"><Vevent /></div>
+  <div class="section"><Vmodifier /></div>
+  <div class="section"><FormData /></div>
+  <div class="section"><Twoway /></div>
+  <div class="section"><Weather /></div>
+  <div class="section"><Vref /></div>
+  <div class="section"><Vcomputed /></div>
+  <div class="section"><Vwatch /></div>
+  <div class="section"><Deepwatch /></div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.section {
+  padding: 20px;
+}
+</style>
