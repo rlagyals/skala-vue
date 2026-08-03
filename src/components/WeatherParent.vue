@@ -39,7 +39,7 @@ const showDetail = (city) => {
 
 <template class="app-container">
   <div class="dashboard-wrapper">
-    <h1>🌤️ 과제 2: 날씨 컴포지션</h1>
+    <h1>🌤️ 과제 3: 날씨 컴포넌트</h1>
     <hr />
 
     <SearchBar v-model="searchQuery" />

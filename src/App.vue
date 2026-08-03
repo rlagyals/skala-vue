@@ -23,6 +23,9 @@ import Vcomputed from './Vcomputed.vue'
 import Vwatch from './Vwatch.vue'
 import Deepwatch from './Deepwatch.vue'
 import WeatherParent from './components/WeatherParent.vue'
+import PropsEmitsParent from './components/PropsEmitsParent.vue'
+import SlotDefaultParent from './components/SlotDefaultParent.vue'
+import SlotScopedParent from './components/SlotScopedParent.vue'
 </script>
 
 <template>
@@ -50,6 +53,9 @@ import WeatherParent from './components/WeatherParent.vue'
   <div class="section"><Vwatch /></div>
   <div class="section"><Deepwatch /></div>
   <div class="section"><WeatherParent /></div>
+  <div class="section"><PropsEmitsParent /></div>
+  <div class="section"><SlotDefaultParent /></div>
+  <div class="section"><SlotScopedParent /></div>
 </template>
 
 <style scoped>
