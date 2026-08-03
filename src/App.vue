@@ -22,6 +22,7 @@ import Vref from './Vref.vue'
 import Vcomputed from './Vcomputed.vue'
 import Vwatch from './Vwatch.vue'
 import Deepwatch from './Deepwatch.vue'
+import WeatherParent from './components/WeatherParent.vue'
 </script>
 
 <template>
@@ -48,6 +49,7 @@ import Deepwatch from './Deepwatch.vue'
   <div class="section"><Vcomputed /></div>
   <div class="section"><Vwatch /></div>
   <div class="section"><Deepwatch /></div>
+  <div class="section"><WeatherParent /></div>
 </template>
 
 <style scoped>

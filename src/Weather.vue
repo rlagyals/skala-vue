@@ -1,5 +1,7 @@
 <script setup>
 import { ref, computed, watch, watchEffect } from 'vue'
+import SearchBar from './components/SearchBar.vue'
+import BaseDashboardCard from './components/BaseDashboardCard.vue'
 
 // 1. 반응형 상태 관리를 위한 지역별 날씨 배열
 const weatherList = ref([
@@ -44,51 +46,18 @@ const showDetail = (cityName, status) => {
 <template>
   <div class="app-container">
     <div class="dashboard-wrapper">
-      <h1>🌤️ 과제 1: 날씨 (Mockup)</h1>
+      <h1>🌤️ 과제 2: 날씨 컴포지션</h1>
       <hr />
 
-      <div class="search-box">
-        <h3>🔍 도시 검색</h3>
-        <input
-          type="text"
-          :value="searchQuery"
-          @input="searchQuery = $event.target.value"
-          placeholder="검색할 도시 이름 입력"
-        />
-        <p>검색 중인 도시: {{ searchQuery }}</p>
-      </div>
+      <SearchBar v-model="searchQuery" />
 
-      <div class="list-box">
-        <h3>🏙️ 지역별 날씨 현황</h3>
-
-        <!-- 4. 검색 결과 표시 -->
-        <p v-if="searchQuery && filteredWeatherList.length === 0">
-          "{{ searchQuery }}"과/와 일치하는 도시가 없습니다.
-        </p>
-
-        <div
-          v-for="city in filteredWeatherList"
-          :key="city.id"
-          class="weather-card"
-          @click="selectCity(city)"
-        >
-          <p>{{ city.name }} ({{ city.status }})</p>
-          <p>현재 기온: {{ city.temp }}℃</p>
-
-          <span class="badge" :class="city.temp >= 25 ? 'hot' : 'cool'">
-            {{ city.temp >= 25 ? '🔥 더움 (25도 이상)' : '❄️ 선선함 (25도 미만)' }}
-          </span>
-
-          <button class="btn-detail" @click.stop="showDetail(city.name, city.status)">
-            상세보기
-          </button>
-        </div>
-      </div>
-
-      <p v-if="(searchQuery || selectedCityInfo) && filteredWeatherList.length !== 0">
-        {{ searchQuery || selectedCityInfo.name }}이 선택되었습니다.
-      </p>
-      <p v-else-if="!(searchQuery || selectedCityInfo)">카드를 클릭하거나 검색해 보세요.</p>
+      <BaseDashboardCard
+        :filtered-weather-list="filteredWeatherList"
+        :search-query="searchQuery"
+        :selected-city-info="selectedCityInfo"
+        @select-city="selectCity"
+        @show-detail="(city) => showDetail(city.name, city.status)"
+      />
     </div>
   </div>
 </template>
